@@ -55,8 +55,8 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen>
       children: [
         CachedNetworkImage(
           imageUrl:
-              "https://media.istockphoto.com/photos/businesswoman-using-computer-in-dark-office-picture-id557608443?k=6&m=557608443&s=612x612&w=0&h=fWWESl6nk7T6ufo4sRjRBSeSiaiVYAzVrY-CLlfMptM=",
-          placeholder: (context, url) => Image.asset(
+             "https://images.unsplash.com/photo-1634317069738-b1a80f60b93b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80",
+             placeholder: (context, url) => Image.asset(
             'assets/images/wallpaper.jpg',
             fit: BoxFit.fill,
           ),
@@ -115,7 +115,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen>
               ),
               MaterialButton(
                 onPressed: _forgetpasswordFCT,
-                color: Colors.pink.shade700,
+                color: Colors.redAccent,
                 elevation: 10,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13),

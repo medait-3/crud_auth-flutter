@@ -137,8 +137,8 @@ class _SignUpScreenState extends State<SignUpScreen>
       children: [
         CachedNetworkImage(
           imageUrl:
-              "https://media.istockphoto.com/photos/businesswoman-using-computer-in-dark-office-picture-id557608443?k=6&m=557608443&s=612x612&w=0&h=fWWESl6nk7T6ufo4sRjRBSeSiaiVYAzVrY-CLlfMptM=",
-          placeholder: (context, url) => Image.asset(
+              "https://images.unsplash.com/photo-1634317069738-b1a80f60b93b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80",
+            placeholder: (context, url) => Image.asset(
             'assets/images/wallpaper.jpg',
             fit: BoxFit.fill,
           ),
@@ -220,6 +220,10 @@ class _SignUpScreenState extends State<SignUpScreen>
                             style: TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                               hintText: 'Full name',
+                              prefixIcon: Icon(
+                                Icons.people_alt,
+                                color: Colors.white,
+                              ),
                               hintStyle: TextStyle(color: Colors.white),
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
@@ -309,6 +313,10 @@ class _SignUpScreenState extends State<SignUpScreen>
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintText: 'Email',
+                        prefixIcon: Icon(
+                          Icons.email,
+                          color: Colors.white,
+                        ),
                         hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -356,6 +364,10 @@ class _SignUpScreenState extends State<SignUpScreen>
                           ),
                         ),
                         hintText: 'Password',
+                        prefixIcon: Icon(
+                          Icons.lock,
+                          color: Colors.white,
+                        ),
                         hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -391,6 +403,10 @@ class _SignUpScreenState extends State<SignUpScreen>
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         hintText: 'Phone number',
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.white,
+                        ),
                         hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -422,7 +438,10 @@ class _SignUpScreenState extends State<SignUpScreen>
                         controller: _positionCPTextController,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: 'Position in the company',
+                          hintText: 'Position in the company',prefixIcon: Icon(
+                            Icons.lock,
+                            color: Colors.white,
+                          ),
                           hintStyle: TextStyle(color: Colors.white),
                           disabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.white),
@@ -461,7 +480,7 @@ class _SignUpScreenState extends State<SignUpScreen>
                     )
                   : MaterialButton(
                       onPressed: submitFormOnSignUp,
-                      color: Colors.pink.shade700,
+                      color: Colors.redAccent,
                       elevation: 10,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(13),
