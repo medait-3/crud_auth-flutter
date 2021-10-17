@@ -138,7 +138,7 @@ class _SignUpScreenState extends State<SignUpScreen>
         CachedNetworkImage(
           imageUrl:
               "https://images.unsplash.com/photo-1634317069738-b1a80f60b93b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80",
-            placeholder: (context, url) => Image.asset(
+          placeholder: (context, url) => Image.asset(
             'assets/images/wallpaper.jpg',
             fit: BoxFit.fill,
           ),
@@ -155,44 +155,17 @@ class _SignUpScreenState extends State<SignUpScreen>
               SizedBox(
                 height: size.height * 0.1,
               ),
-              Text(
-                'Register',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+              Center(
+                child: Text(
+                  'Register',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               SizedBox(
-                height: 9,
-              ),
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Already have an account?',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    TextSpan(text: '   '),
-                    TextSpan(
-                      text: 'Login',
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () => Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LoginScreen(),
-                              ),
-                            ),
-                      style: TextStyle(
-                          color: Colors.blue.shade300,
-                          decoration: TextDecoration.underline,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+                height: 4,
               ),
               SizedBox(
                 height: size.height * 0.05,
@@ -249,9 +222,9 @@ class _SignUpScreenState extends State<SignUpScreen>
                                   decoration: BoxDecoration(
                                       border: Border.all(
                                           width: 1, color: Colors.white),
-                                      borderRadius: BorderRadius.circular(16)),
+                                      borderRadius: BorderRadius.circular(111)),
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(16),
+                                    borderRadius: BorderRadius.circular(111),
                                     child: imageFile == null
                                         ? Image.network(
                                             'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
@@ -438,7 +411,8 @@ class _SignUpScreenState extends State<SignUpScreen>
                         controller: _positionCPTextController,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: 'Position in the company',prefixIcon: Icon(
+                          hintText: 'Position in the company',
+                          prefixIcon: Icon(
                             Icons.lock,
                             color: Colors.white,
                           ),
@@ -507,7 +481,41 @@ class _SignUpScreenState extends State<SignUpScreen>
                           )
                         ],
                       ),
-                    )
+                    ),
+              SizedBox(
+                height: 6,
+              ),
+              Center(
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Already have an account?',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      TextSpan(text: '   '),
+                      TextSpan(
+                        text: 'Login',
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () => Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoginScreen(),
+                                ),
+                              ),
+                        style: TextStyle(
+                            color: Colors.blue.shade300,
+                            decoration: TextDecoration.underline,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         )
